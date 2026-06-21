@@ -142,15 +142,16 @@ const buzz = []; // Divisible by 5
 const fizzbuzz = []; // Divisible by 3
 
 nums.forEach(n => {
+    if(n % 3 == 0){
+        fizz.push(n);
+    }
+    if(n % 5 == 0){
+        buzz.push(n);
+    }
+    
     if(n % 15 == 0){
         // if a number n is divisble by 15, then n is divisible by 3 and 5
-        fizz.push(n);
-        buzz.push(n);
         fizzbuzz.push(n);
-    }else if(n % 3 == 0){
-        fizz.push(n);
-    }else if(n % 5 == 0){
-        buzz.push(n);
     }
 });
 
